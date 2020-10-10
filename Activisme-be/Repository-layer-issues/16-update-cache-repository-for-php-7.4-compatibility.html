@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+              integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+        <style>
+            /* cyrillic-ext */
+            @font-face {
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+            }
+            /* cyrillic */
+            @font-face {
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+            }
+            /* vietnamese */
+            @font-face {
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+
+            body {
+                background-color: #f8fafc;
+                font-family: 'Nunito', sans-serif;
+            }
+
+            .page-header {
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+
+            .page-title {
+                margin: 0;
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 2.5rem;
+            }
+
+            .page-title {
+                margin: 0;
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 2.5rem;
+            }
+
+            .page-title-icon {
+                color: #9aa0ac;
+                font-size: 1.25rem;
+            }
+
+            .page-subtitle {
+                font-size: 0.8125rem;
+                color: #6e7687;
+                margin-left: 2rem;
+            }
+
+            .page-subtitle a {
+                color: inherit;
+            }
+
+            .page-options {
+                margin-left: auto;
+            }
+        </style>
+
+        <title>Issue #634252021 | IssueCLI</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow-sm">
+                <span class="navbar-brand mb-0 h1">IssueCLI</span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fab fa-github mr-1"></i> Community
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#"><i class="fas text-secondary fa-code fw-fw mr-2"></i> IssueCLI repo</a>
+                                <a class="dropdown-item" href="#"><i class="fas text-warning fa-star fa-fw mr-2"></i> Star IssueCLI</a>
+                                <a class="dropdown-item" href=""><i class="fas text-danger fa-bug fa-fw mr-2"></i> Report an issue</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container-fluid" style="margin-top: 60px;">
+            <div class="py-3 page-header">
+                <h1 class="page-title"> <span class="badge shadow-sm badge-success mr-2">Open</span> <span class="font-weight-bold">#16</span> | Update cache repository for php 7.4 compatibility</h1>
+                <div class="page-subtitle"><i class="fas fa-link mr-1"></i> https://github.com/Activisme-be/Repository-layer/issues/16</div>
+            </div>
+
+            <div class="row">
+                <div class="col-8">
+                    <div class="list-group shadow-sm">
+                        <div class="list-group-item border-top-0 border-left-0 border-right-0">
+                            <dl class="row mb-0">
+                                <dt class="col-sm-3">Assignees</dt>
+                                <dd class="col-sm-9">none</dd>
+                                <dt class="col-sm-3">Labels</dt>
+                                <dd class="col-sm-9">none</dd>
+                            </dl>
+                        </div>
+                        <div class="list-group-item border-bottom-0 border-bottom-rounded border-left-0 border-right-0">
+                            <dl class="row mb-0">
+                                <dt class="col-sm-12 mb-2">Issue description</dt>
+                                <dd class="col-sm-12">
+                                    <p class="card-text"><a href="https://github.com/andersao/l5-repository/commit/c4d9d5834445e13d9ea0f00bfa23c67a0202aab1">https://github.com/andersao/l5-repository/commit/c4d9d5834445e13d9ea0f00bfa23c67a0202aab1</a></p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header border-bottom-0">
+                            Creation information
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><i class="far fa-user fa-fw text-muted mb-2 mr-2"></i> Tjoosten</li>
+                                <li><i class="fas fa-calendar-alt text-muted fa-fw mb-2 mr-2"></i> 08/06/2020</i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
+    </body>
+</html>
